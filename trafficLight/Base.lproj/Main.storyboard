@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rkb-DD-a8x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TD2-lZ-fM1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -73,7 +73,7 @@
         <!--View Controller-->
         <scene sceneID="0uV-Uz-cDF">
             <objects>
-                <viewController id="TD2-lZ-fM1" sceneMemberID="viewController">
+                <viewController id="TD2-lZ-fM1" customClass="ViewController" customModule="trafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TEe-ny-5H0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,11 +105,18 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RmB-dj-Urg" secondAttribute="height" multiplier="36:7" id="KP0-nG-gvp"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushTheButton" destination="TD2-lZ-fM1" eventType="touchUpInside" id="GO0-h2-3wN"/>
+                                    <action selector="pushTheButton:" destination="TD2-lZ-fM1" eventType="touchUpInside" id="5cd-DB-tl6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zns-GX-g9u"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AeH-mV-0Mf" firstAttribute="top" secondItem="zns-GX-g9u" secondAttribute="top" constant="20" id="7p5-Of-3Hq"/>
                             <constraint firstItem="GnT-qo-mAl" firstAttribute="top" secondItem="a9a-Gr-FNd" secondAttribute="bottom" constant="15" id="9Uc-A4-3sz"/>
@@ -127,6 +134,12 @@
                             <constraint firstItem="RmB-dj-Urg" firstAttribute="top" secondItem="GnT-qo-mAl" secondAttribute="bottom" constant="24" id="uJt-or-5eh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonStart" destination="RmB-dj-Urg" id="cMV-G7-Skd"/>
+                        <outlet property="greenView" destination="GnT-qo-mAl" id="Qe0-Ug-qAK"/>
+                        <outlet property="redView" destination="AeH-mV-0Mf" id="la3-25-GFb"/>
+                        <outlet property="yellowView" destination="a9a-Gr-FNd" id="GGQ-iZ-CKl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRn-LB-RyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

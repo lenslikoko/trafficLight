@@ -110,8 +110,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushTheButton" destination="TD2-lZ-fM1" eventType="touchUpInside" id="GO0-h2-3wN"/>
-                                    <action selector="pushTheButton:" destination="TD2-lZ-fM1" eventType="touchUpInside" id="5cd-DB-tl6"/>
+                                    <action selector="push:" destination="TD2-lZ-fM1" eventType="touchUpInside" id="Yhu-Au-IEX"/>
                                 </connections>
                             </button>
                         </subviews>

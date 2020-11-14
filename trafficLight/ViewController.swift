@@ -14,22 +14,43 @@ class ViewController: UIViewController {
     @IBOutlet var greenView: UIView!
     @IBOutlet var buttonStart: UIButton!
     
+    var numberOfPush = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        redView.backgroundColor = UIColor.red
         redView.layer.cornerRadius = 110
-        redView.alpha = 0.1
+        redView.alpha = 0.3
+        
+        yellowView.backgroundColor = UIColor.yellow
         yellowView.layer.cornerRadius = 110
-        yellowView.alpha = 0.1
+        yellowView.alpha = 0.3
+        
+        greenView.backgroundColor = UIColor.green
         greenView.layer.cornerRadius = 110
-        greenView.alpha = 0.1
+        greenView.alpha = 0.3
         buttonStart.layer.cornerRadius = 10
-        buttonStart.setTitle("STOP", for: .normal)
     }
     
-//    @IBAction func pushTheButton() {
-//        greenView.alpha += 0.1
-//    }
-//    
-    
+    @IBAction func push(_ sender: Any) {
+        buttonStart.setTitle("NEXT", for: .normal)
+        redView.alpha = 0.3
+        yellowView.alpha = 0.3
+        greenView.alpha = 0.3
+        numberOfPush += 1
+
+
+        switch numberOfPush {
+        case 1:
+            yellowView.alpha = 1
+        case 2:
+            greenView.alpha = 1 
+        default:
+            numberOfPush = 0
+            redView.alpha = 1
+
+        }
+        
+    }
 }
 

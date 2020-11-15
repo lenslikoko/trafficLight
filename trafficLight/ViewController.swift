@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenView: UIView!
     @IBOutlet var buttonStart: UIButton!
     
-    var numberOfPush = -1
+    var numberOfPush = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +41,12 @@ class ViewController: UIViewController {
 
 
         switch numberOfPush {
-        case 1:
-            yellowView.alpha = 1
         case 2:
+            yellowView.alpha = 1
+        case 3:
             greenView.alpha = 1 
         default:
-            numberOfPush = 0
+            numberOfPush = 1
             redView.alpha = 1
 
         }
